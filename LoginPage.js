@@ -8,6 +8,12 @@ let loginPage=function(){
 	
 	let btnLogin=libs.getLocator(getLocator.locators.btnLogin_LcType,getLocator.locators.btnLogin);
 	
+	let userNameValidation=libs.getLocator(getLocator.locators.UserNameValidationMsgLcType,getLocator.locators.UserNameValidationMsg);
+	
+	let passwordValidation=libs.getLocator(getLocator.locators.PasswordValidationMsgLcType,getLocator.locators.PasswordValidationMsg);
+	
+	let registerHyperlink=libs.getLocator(getLocator.locators.Register4LoginRegLinkLcType,getLocator.locators.Register4LoginRegLink);
+	
 	this.setUserName=function(name){
 		txtUserName.sendKeys(name);
 	}
@@ -18,6 +24,27 @@ let loginPage=function(){
 	
 	this.clickLoginbutton=function(){
 		btnLogin.click();
+	}
+	
+	this.clickRegisterLink=function(){
+		registerHyperlink.click();
+	}
+	this.isLoginbuttonDisabled=function(){
+		return btnLogin.getAttribute("disabled").then(function(isDisabled) {
+			return isDisabled;
+		});
+	}
+	
+	this.getUserNameValidationMsg=function(){
+		return userNameValidation.getText().then(function(msg) {
+			return msg;
+		})
+	}
+	
+	this.getPasswordValidationMsg=function(){
+		return passwordValidation.getText().then(function(msg) {
+			return msg;
+		})
 	}
 }
 module.exports=new loginPage();
