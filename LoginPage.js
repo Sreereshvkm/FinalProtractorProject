@@ -14,6 +14,8 @@ let loginPage=function(){
 	
 	let registerHyperlink=libs.getLocator(getLocator.locators.Register4LoginRegLinkLcType,getLocator.locators.Register4LoginRegLink);
 	
+	let failedLoginMsg=libs.getLocator(getLocator.locators.LoginFaileMessage_LcType,getLocator.locators.LoginFaileMessage);
+	
 	this.setUserName=function(name){
 		txtUserName.sendKeys(name);
 	}
@@ -24,6 +26,12 @@ let loginPage=function(){
 	
 	this.clickLoginbutton=function(){
 		btnLogin.click();
+	}
+	
+	this.getFailedLoginMessage=function(){
+		return failedLoginMsg.getText().then(function(msg) {
+			return msg;
+		})
 	}
 	
 	this.clickRegisterLink=function(){

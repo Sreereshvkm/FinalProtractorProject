@@ -22,9 +22,7 @@ describe("TestSuite",function(){
 		loginPage.clickRegisterLink();
 		var regURL=regForLogin.getRegUrl();
 		expect(regURL).toContain(assertion.assertData.register4Login);
-		
 		regForLogin.fillRegForm("SreeX","VkmX","SreeAb","1234567");
-		
 		loginPage.setUserName("Sree");
 		loginPage.setPassword("1234567");
 		loginPage.clickLoginbutton();
@@ -32,6 +30,15 @@ describe("TestSuite",function(){
 			expect(msg).toEqual(assertion.assertData.loggedInPageSuccessMsg);
 		})
 		
+	});
+	
+	it("Verify failed login",function(){
+		loginPage.setUserName("Sree");
+		loginPage.setPassword("45678");
+		loginPage.clickLoginbutton();
+		loginPage.getFailedLoginMessage().then(function(msg) {
+			expect(msg).toEqual(assertion.assertData.failedLoginMessage);
+		})
 	});
 	
 	it("Verify Login button disabled by default",function(){

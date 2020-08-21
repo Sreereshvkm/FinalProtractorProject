@@ -9,6 +9,8 @@ module.exports.locators={
 		"UserNameValidationMsgLcType":"css",
 		"PasswordValidationMsg":"span[ng-show*='form.password']",
 		"PasswordValidationMsgLcType":"css",
+		"LoginFaileMessage":"flash.message",
+		"LoginFaileMessage_LcType":"binding",
 		"Register4LoginRegLink":"Register",
 		"Register4LoginRegLinkLcType":"linkText",
 		"Regsiter4LoginTxtFirstName":"vm.user.firstName",
@@ -21,7 +23,6 @@ module.exports.locators={
 		"Regsiter4LoginTxtPasswordLcType":"model",
 		"Regsiter4LoginRegButton":"Register",
 		"Regsiter4LoginRegButtonLcType":"buttonText",
-
 		"LoggedInMessage":"div[class*='col-sm-']>div.ng-scope>:nth-child(2)",
 		"LoggedInMessageLcType":"css",
 		
