@@ -1,0 +1,27 @@
+module.exports={
+		invalidLoginData:{
+			firstData:{
+				"userName":"xyz",
+				"password":"passwo1"
+			},
+			secondData:{
+				"userName":"abc",
+				"password":"4567"
+			}
+
+		},
+		validLoginData:{
+			firstData:{
+				"firstName":"Sree",
+				"lastName":"VkM",
+				"userName":"Sre",
+				"password":"4567"
+			},
+			secondData:{
+				"firstName":"Rahul",
+				"lastName":"KK",
+				"userName":"rahul",
+				"password":"rahu4345"
+			}
+		}
+}
