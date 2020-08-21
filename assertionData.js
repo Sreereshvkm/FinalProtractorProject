@@ -5,6 +5,8 @@ module.exports.assertData={
 		"loginPasswordValidationMsg":"Password is required",
 		"loggedInPageSuccessMsg":"You're logged in!!",
 		"failedLoginMessage":"Username or password is incorrect",
-		"register4Login":"#/register"
+		"register4Login":"#/register",
+		"registrationPageTitle":"Register"
+		
 }
 

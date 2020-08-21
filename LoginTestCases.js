@@ -7,7 +7,7 @@ let regForLogin=require("./Reg4Login.js");
 let data4Login=require("./dataForLogin.js");
 let using = require('jasmine-data-provider');
 
-describe("TestSuite",function(){
+describe("Login TestSuite",function(){
 
 	beforeEach(function() {
 		app_launch.openApp("https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login");

@@ -25,7 +25,23 @@ module.exports.locators={
 		"Regsiter4LoginRegButtonLcType":"buttonText",
 		"LoggedInMessage":"div[class*='col-sm-']>div.ng-scope>:nth-child(2)",
 		"LoggedInMessageLcType":"css",
-		
-			
+		"txtRegisterFirstName":"FirstName",
+		"txtRegisterFirstNameLcType":"model",
+		"txtRegisterLastName":"FirstName",
+		"txtRegisterLastNameLcType":"model",
+		"txtAreaRegisterAddres":"Adress",
+		"txtAreaRegisterAddresLcType":"model",
+		"txtRegisterEmail":"EmailAdress",
+		"txtRegisterEmailLcType":"model",
+		"txtRegisterEmail":"EmailAdress",
+		"txtRegisterEmailLcType":"model",
+		"txtRegisterPhone":"Phone",
+		"txtRegisterPhoneLcType":"model",
+		"radioRegisterMale":"input[value='Male']",
+		"radioRegisterMaleLcType":"css",
+		"radioRegisterFemale":"input[value='FeMale']",
+		"radioRegisterFemaleLcType":"css",
+		"checkBoxRegister":"input[type='checkbox']",
+		"checkBoxRegisterLcType":"css"
 			
 }
