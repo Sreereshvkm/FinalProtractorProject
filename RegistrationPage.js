@@ -10,7 +10,26 @@ let RegistraionPage=function(){
 		let txtPhone=libs.getLocator(getLocators.locators.txtRegisterPhoneLcType,getLocators.locators.txtRegisterPhone);
 		let radioMale=libs.getLocator(getLocators.locators.radioRegisterMaleLcType,getLocators.locators.radioRegisterMale);
 		let radioFemale=libs.getLocator(getLocators.locators.radioRegisterFemaleLcType,getLocators.locators.radioRegisterFemale);
-		let checkboxHobbies=libs.getLocator(getLocators.locators.checkBoxRegisterLcType,getLocators.locators.checkBoxRegister);
+		let genderRadioButton=libs.getAllLocator(getLocators.locators.radioGenderLcType,getLocators.locators.radioGender);
+		let checkboxHobbies=libs.getAllLocator(getLocators.locators.checkBoxRegisterLcType,getLocators.locators.checkBoxRegister);
+		let multiSelectLanguage=libs.getLocator(getLocators.locators.multiCheckBoxLanguageLcType,getLocators.locators.multiCheckBoxLanguage);
+		let allLangauges=libs.getAllLocator(getLocators.locators.allLanguagesLcType,getLocators.locators.allLanguages);
+		let allSkillDropDownValues=libs.getAllLocator(getLocators.locators.allSkillDropDownValuesLcType,getLocators.locators.allSkillDropDownValues);
+		let allCoutries=libs.getAllLocator(getLocators.locators.allCountriesValuesLcType,getLocators.locators.allCountriesValues);
+		let selectCountryArrowDown=libs.getLocator(getLocators.locators.selectCountryDropDownLcType,getLocators.locators.selectCountryDropDown);
+		let selectCountrySearchbox=libs.getLocator(getLocators.locators.selectCountrySearchboxLcType,getLocators.locators.selectCountrySearchbox);
+		let selectCountrySearchResult=libs.getLocator(getLocators.locators.selectCountrySearchResultLcType,getLocators.locators.selectCountrySearchResult);
+		let allYearDropDownDob=libs.getAllLocator(getLocators.locators.yearDropDownDobLcType,getLocators.locators.yearDropDownDob);
+		let allMonthDropDownDob=libs.getAllLocator(getLocators.locators.monthDropDownDobLcType,getLocators.locators.monthDropDownDob);
+		let allDayDropDownDob=libs.getAllLocator(getLocators.locators.dayDropDownDobLcType,getLocators.locators.dayDropDownDob);
+		let txtPassword=libs.getLocator(getLocators.locators.txtPasswordLcType,getLocators.locators.txtPassword);
+		let txtConfirmPassword=libs.getLocator(getLocators.locators.txtConfirmPasswordLcType,getLocators.locators.txtConfirmPassword);
+		let photoUpload=libs.getLocator(getLocators.locators.photoUploadLcType,getLocators.locators.photoUpload);
+		
+		
+		this.uloadPhoto=function(photo){
+			photoUpload.sendKeys(__dirname+"/Photos/"+photo);
+		}
 		
 		this.setFirstName=function(fName){
 			txtFirstName.sendKeys(fName);
@@ -40,9 +59,113 @@ let RegistraionPage=function(){
 			radioFemale.click();
 		}
 		
+		this.setYearForDob=function(year){
+			allYearDropDownDob.each(function(item) {
+				item.getText().then(function(displayedYear) {
+					if(displayedYear==year){
+						item.click();
+					}
+				})
+				
+			});
+		}
+		
+		this.setMonthForDob=function(month){
+			allMonthDropDownDob.each(function(item) {
+				item.getText().then(function(displayedMonth) {
+					if(displayedMonth==month){
+						item.click();
+					}
+				})
+				
+			});
+		}
+		
+		this.setDayForDob=function(day){
+			allDayDropDownDob.each(function(item) {
+				item.getText().then(function(displayedDay) {
+					if(displayedDay==day){
+						item.click();
+					}
+				})
+				
+			});
+		}
+		
+		this.setPassword=function(password){
+			txtPassword.sendKeys(password);
+		}
+		
+		this.setConfirmPassword=function(confimPassword){
+			txtConfirmPassword.sendKeys(confimPassword);
+		}
+		
+		this.selectCountryDropDownWithSearchBox=function(country){
+			selectCountryArrowDown.click();
+			selectCountrySearchbox.sendKeys(country);
+			selectCountrySearchResult.getText().then(function(searchResult) {
+				if(searchResult==country){
+					selectCountrySearchResult.click();
+				}
+			});
+		}
+		
+		this.setGender=function(gender){
+			genderRadioButton.each(function(item) {
+				item.getAttribute("Value").then(function(value) {
+					if(value==gender){
+						item.click();
+					}
+				});
+			}) 
+		}
+		
 		this.selectHobby=function(hobby){
 			checkboxHobbies.each(function(item) {
-				
+				item.getAttribute("Value").then(function(value) {
+					if(value==hobby){
+						item.click();
+					}
+				});
+			})
+		}
+		
+		this.selectSingleLanguage=function(language){
+			multiSelectLanguage.click();
+			allLangauges.each(function(item) {
+				item.getText().then(function(lang) {
+					if(lang==language){
+						item.click();
+					}
+				})
+			});
+		}
+		
+		
+		this.selecMultipleLanguages=function(languages){
+			for(i=0;i<languages.length;i++){
+				this.selectSingleLanguage(languages[i]);
+			}
+		}
+		
+		this.selectSkill=function(skill){
+			allSkillDropDownValues.each(function(item) {
+				item.getText().then(function(sk) {
+					if(sk==skill){
+						item.click();
+					}
+				});
+			})
+		}
+		
+
+		this.selectCountry=function(country){
+			allCoutries.each(function(item) {
+				item.getText().then(function(cntry) {
+					if(cntry==country){
+						item.click();
+					}
+				});
 			})
 		}
 }

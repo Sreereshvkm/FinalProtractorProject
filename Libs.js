@@ -42,6 +42,10 @@ let app_launcher=function(){
 			loc=element(by.partialLinkText(value));
 			break;
 			
+		case "tagName":
+			loc=element(by.tagName(value));
+			break;
+			
 
 		default:
 			console.log("invalid");
@@ -86,7 +90,10 @@ let app_launcher=function(){
 			loc=element.all(by.partialLinkText(value));
 			break;
 			
-
+		case "tagName":
+			loc=element.all(by.tagName(value));
+			break;
+			
 		default:
 			console.log("invalid");
 		}
