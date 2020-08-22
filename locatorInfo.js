@@ -1,8 +1,8 @@
 module.exports.locators={
 		"txtUserName":"username",
 		"txtuserName_LcType":"id",
-		"txtPassword":"password",
-		"txt_password_LcType":"id",
+		"txtLoginPassword":"password",
+		"txtLoginPassword_LcType":"id",
 		"btnLogin":"Login",
 		"btnLogin_LcType":"buttonText",
 		"UserNameValidationMsg":"span[ng-show*='form.username']",
@@ -70,5 +70,9 @@ module.exports.locators={
 		"txtConfirmPassword":"CPassword",
 		"txtConfirmPasswordLcType":"model",
 		"photoUpload":"imagesrc",
-		"photoUploadLcType":"id"
+		"photoUploadLcType":"id",
+		"buttonSubmit":"submitbtn",
+		"buttonSubmitLcType":"id",
+		"registerSuccessPageWebTable":"li.active>a",
+		"registerSuccessPageWebTableLcType":"css"
 }

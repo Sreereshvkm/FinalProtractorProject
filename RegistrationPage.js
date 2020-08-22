@@ -25,10 +25,16 @@ let RegistraionPage=function(){
 		let txtPassword=libs.getLocator(getLocators.locators.txtPasswordLcType,getLocators.locators.txtPassword);
 		let txtConfirmPassword=libs.getLocator(getLocators.locators.txtConfirmPasswordLcType,getLocators.locators.txtConfirmPassword);
 		let photoUpload=libs.getLocator(getLocators.locators.photoUploadLcType,getLocators.locators.photoUpload);
-		
+		let buttonSubmit=libs.getLocator(getLocators.locators.buttonSubmitLcType,getLocators.locators.buttonSubmit);
 		
 		this.uloadPhoto=function(photo){
 			photoUpload.sendKeys(__dirname+"/Photos/"+photo);
+		}
+		
+		this.clickSubmitButton=function(){
+			buttonSubmit.click().then(function() {
+				browser.sleep(5000);
+			})
 		}
 		
 		this.setFirstName=function(fName){
@@ -167,6 +173,30 @@ let RegistraionPage=function(){
 					}
 				});
 			})
+		}
+		
+		this.performRegistration=function(fName,lName,address,email,phone,gender,hobby,language,skill,country,
+				selectCountry,DobYear,DobMonth,DobDay,password,cPassword,photo){
+			
+			this.setFirstName(fName);
+			this.setLastName(lName);
+			this.setAddress(address);
+			this.setEmail(email);
+			this.setPhone(phone);
+			this.setGender(gender);
+			this.selectHobby(hobby);
+			this.selectSingleLanguage(language);
+			this.selectSkill(skill);
+			this.selectCountry(country);
+			this.selectCountryDropDownWithSearchBox(selectCountry);
+			this.setYearForDob(DobYear);
+			this.setMonthForDob(DobMonth);
+			this.setDayForDob(DobDay);
+			this.setPassword(password);
+			this.setConfirmPassword(cPassword);
+			this.uloadPhoto(photo);
+			this.clickSubmitButton();
+			
 		}
 }
 module.exports=new RegistraionPage();

@@ -1,0 +1,44 @@
+module.exports={
+		dataForSuccessRegistration:{
+			FirstData:{
+				"firstName":"SreeJith",
+				"lastName":"KK",
+				"address":"bangalore",
+				"emailAddress":"Sree@gmail.com",
+				"phoneNumber":"9876543210",
+				"gender":"Male",
+				"Hobby":"Cricket",
+				"languages":"English",
+				"Skills":"Certifications",
+				"Country":"India",
+				"SelecCountry":"India",
+				"DobYear":"1990",
+				"DobMonth":"November",
+				"DobDay":"24",
+				"password":"Test1234",
+				"cPassword":"Test1234",
+				"photo":"lion.png"
+					
+			},
+			SecondData:{
+				"firstName":"Nishi",
+				"lastName":"SS",
+				"address":"Chennai",
+				"emailAddress":"SagarNishiSS45@gmail.com",
+				"phoneNumber":"8854321088",
+				"gender":"FeMale",
+				"Hobby":"Movies",
+				"languages":"Danish",
+				"Skills":"APIs",
+				"Country":"Angola",
+				"SelecCountry":"Austria",
+				"DobYear":"1988",
+				"DobMonth":"March",
+				"DobDay":"28",
+				"password":"Nishi1234",
+				"cPassword":"Nishi1234",
+				"photo":"Tiger.png"
+					
+			}
+		}
+}

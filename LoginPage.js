@@ -4,7 +4,7 @@ let loginPage=function(){
 	
 	let txtUserName=libs.getLocator(getLocator.locators.txtuserName_LcType,getLocator.locators.txtUserName);
 	
-	let txtPassword=libs.getLocator(getLocator.locators.txt_password_LcType,getLocator.locators.txtPassword);
+	let txtPassword=libs.getLocator(getLocator.locators.txtLoginPassword_LcType,getLocator.locators.txtLoginPassword);
 	
 	let btnLogin=libs.getLocator(getLocator.locators.btnLogin_LcType,getLocator.locators.btnLogin);
 	

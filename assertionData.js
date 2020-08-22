@@ -6,7 +6,8 @@ module.exports.assertData={
 		"loggedInPageSuccessMsg":"You're logged in!!",
 		"failedLoginMessage":"Username or password is incorrect",
 		"register4Login":"#/register",
-		"registrationPageTitle":"Register"
+		"registrationPageTitle":"Register",
+		"registrationSuccessPageWebTableActiveTab":"WebTable"
 		
 }
 
