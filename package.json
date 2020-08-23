@@ -3,7 +3,8 @@
 	"dependencies": {
 		"protractor": "^7.0.0",
 		"protractor-jasmine2-html-reporter": "^0.0.7",
-		"jasmine-data-provider": "^2.2.0"
+		"jasmine-data-provider": "^2.2.0",
+		"faker": "^2.0.0"
 	},
 	"scripts": {
 		"webdriver-update": "./node_modules/.bin/webdriver-manager update",

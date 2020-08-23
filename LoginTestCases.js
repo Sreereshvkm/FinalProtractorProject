@@ -1,4 +1,5 @@
-let app_launch=require('./Libs.js');
+
+let libs=require('./Libs.js');
 let assertion=require('./assertionData.js');
 let loginLocators=require("./locatorInfo.js");
 let loginPage=require("./LoginPage.js");
@@ -10,11 +11,11 @@ let using = require('jasmine-data-provider');
 describe("Login TestSuite",function(){
 
 	beforeEach(function() {
-		app_launch.openApp("https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login");
+		libs.openApp("https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login");
 	})
 
 	it("Verify Login page Title",function(){
-		app_launch.openApp("https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login").then(function(title) {
+		libs.openApp("https://www.globalsqa.com/angularJs-protractor/registration-login-example/#/login").then(function(title) {
 			expect(title).toEqual(assertion.assertData.loginPageTitle);
 		})
 

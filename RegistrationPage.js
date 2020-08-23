@@ -26,11 +26,17 @@ let RegistraionPage=function(){
 		let txtConfirmPassword=libs.getLocator(getLocators.locators.txtConfirmPasswordLcType,getLocators.locators.txtConfirmPassword);
 		let photoUpload=libs.getLocator(getLocators.locators.photoUploadLcType,getLocators.locators.photoUpload);
 		let buttonSubmit=libs.getLocator(getLocators.locators.buttonSubmitLcType,getLocators.locators.buttonSubmit);
+		let failedRegMsg=libs.getLocator(getLocators.locators.registerErrorMsgLcType,getLocators.locators.registerErrorMsg);
 		
 		this.uloadPhoto=function(photo){
 			photoUpload.sendKeys(__dirname+"/Photos/"+photo);
 		}
 		
+		this.getFailedRegMessage=function(){
+			return failedRegMsg.getText().then(function(errMsg) {
+				return errMsg;
+			})
+		}
 		this.clickSubmitButton=function(){
 			buttonSubmit.click().then(function() {
 				browser.sleep(5000);

@@ -74,5 +74,7 @@ module.exports.locators={
 		"buttonSubmit":"submitbtn",
 		"buttonSubmitLcType":"id",
 		"registerSuccessPageWebTable":"li.active>a",
-		"registerSuccessPageWebTableLcType":"css"
+		"registerSuccessPageWebTableLcType":"css",
+		"registerErrorMsg":"div[ng-if='EmailExists']",
+		"registerErrorMsgLcType":"css"
 }

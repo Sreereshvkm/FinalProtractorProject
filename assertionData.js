@@ -7,7 +7,8 @@ module.exports.assertData={
 		"failedLoginMessage":"Username or password is incorrect",
 		"register4Login":"#/register",
 		"registrationPageTitle":"Register",
-		"registrationSuccessPageWebTableActiveTab":"WebTable"
+		"registrationSuccessPageWebTableActiveTab":"WebTable",
+		"registerFailedMsg":"Email already exists"
 		
 }
 
